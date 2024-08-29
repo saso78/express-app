@@ -21,4 +21,4 @@ services:
    volumes:
     - /var/run/docker.sock:/var/run/docker.sock
    container_name: watchtower
-   command: sasho78/express-app --interval 60
+   command: sasho78/express-app-express --interval 60
