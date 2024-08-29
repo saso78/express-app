@@ -36,8 +36,4 @@ jobs:
               push: true
               tags: sasho78/express-app:latest
 
-        - name: Deploy with Docker Compose
-          run: docker-compose up -d
-          env:
-              REPO_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
-              REPO_PASS: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+              
