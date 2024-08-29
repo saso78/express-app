@@ -9,6 +9,7 @@ services:
     volumes:
       - .:/app
     working_dir: /app
+    container_name: express
     command: ["node", "index.js"]
       
   watchtower:
