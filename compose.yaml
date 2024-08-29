@@ -13,12 +13,12 @@ services:
     command: ["node", "index.js"]
       
   watchtower:
-    image: containrrr/watchtower
-    environment:
-      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
-      - REPO_USER =sasho78
-      - REPO_PASS =dckr_pat_mHmxT7bRQMVurwndVXeZF3EWSuc
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    container_name: watchtower
-    command: express --interval 60
+   image: containrrr/watchtower
+   environment:
+    - WATCHTOWER_POLL_INTERVAL=60
+    - REPO_USER=sasho78
+    - REPO_PASS=dckr_pat_mHmxT7bRQMVurwndVXeZF3EWSuc
+   volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+   container_name: watchtower
+   command: sasho78/express-app-express --interval 60
