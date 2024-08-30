@@ -9,13 +9,10 @@ services:
     container_name: express
     command: ["node", "index.js"]
 
+
   watchtower:
-    image: containrrr/watchtower
-    environment:
-      - WATCHTOWER_POLL_INTERVAL=60
-      - REPO_USER=sasho78
-      - REPO_PASS=dckr_pat_mHmxT7bRQMVurwndVXeZF3EWSuc
+    image: containrrr/watchtower:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    container_name: watchtower
-    command: --scope express --interval 60
+      - C:\Users\strpo\Docker\material-applications\express-app\config.json:/config.json
+    command: --interval 60
